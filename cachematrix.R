@@ -1,7 +1,10 @@
+# cachematrix.R
+#
 # 2 functions to assist in caching the inverse of a matrix
-
-# TODO: 
-#       write guard clause against x != matrix
+#
+# Usage:
+#   You first create a makeCacheMatrix object from a matrix
+#   then you solve its inverse using cacheSolve
 
 makeCacheMatrix <- function(x = matrix()) {
     # Wrap the matrix object provided and allow the caching of it's inverse 
@@ -43,6 +46,9 @@ cacheSolve <- function(x, ...) {
     #
     # Returns:
     #   The inverse of the provided matrix
+    #
+    # Todo: 
+    #   write guard clause against x != matrix
     
     inverse <- x$getInverse()
     
